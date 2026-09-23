@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 
 trading_bp = Blueprint("trading", __name__)
 
-@trading_bp.route("/webhook", method=["POST"])
+@trading_bp.route("/webhook", methods=["POST"])
 def receive_trade_request():
   data = request.get_json()
   if not data or "target_url" not in data:

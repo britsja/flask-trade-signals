@@ -5,3 +5,7 @@ curl -X POST http://127.0.0.1:5000/api/v1/shopify/audit \
 curl -X POST http://127.0.0.1:5000/api/v1/trading/webhook \
   -H "Content-Type: application/json" \
   -d '{"target_url": "https://example.myshopify.com"}'
+
+curl -X POST http://127.0.0.1:5000/api/v1/trading/webhook \
+  -H "Content-Type: application/json" \
+  -d '{"ticker": "EURUSD", "action": "BUY", "price": 1.32}'
